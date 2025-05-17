@@ -16,8 +16,8 @@ function AppWrapper() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Navigate to="/auth" replace />} />
-        <Route path="/auth" element={<Login />} />
+       
+        <Route path="/" element={<Login />} />
         <Route
           path="/dashboard"
           element={

@@ -64,7 +64,7 @@ const Dashboard = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     localStorage.clear();
-    navigate('/auth');
+    navigate('/');
   };
 
   const handleAddBlog = () => {
