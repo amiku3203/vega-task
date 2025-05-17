@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import ProtectedRoute from './Components/ProtectedRoute';
@@ -26,16 +26,22 @@ function AppWrapper() {
             </ProtectedRoute>
           }
         />
-        <Route path="/blogs" element={
+        <Route
+          path="/blogs"
+          element={
             <ProtectedRoute>
-<AllBlogs />
+              <AllBlogs />
             </ProtectedRoute>
-          } />
-        <Route path="/blogs/:id" element={
+          }
+        />
+        <Route
+          path="/blogs/:id"
+          element={
             <ProtectedRoute>
-            <BlogViewer />
-          </ProtectedRoute>
-          } />
+              <BlogViewer />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
 
       {!shouldHideFooter && <Footer />}
